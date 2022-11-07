@@ -1,4 +1,6 @@
-{"name":"Alex",
- "surname":"Petrov",
- "age": 25,
- "pets":"2_dogs"}
+{"name" : "Diana",
+ "middlename" : "Dmitrievna",
+ "surname" : "Masliy",
+ "age" : 25,
+ "pets" : "3 dogs",
+ "salary" : 1000}
