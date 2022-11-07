@@ -1,6 +1,6 @@
 {"skill 1" : "Basic theory",
  "skill 2" : "Client server architecture",
- "skill 3" : "HTTP method, request, response",
+ "skill 3" : "HTTP/HTTPS method, request, response",
  "skill 4" : "JSON, XML",
  "skill 5" : "Postman",
  "skill 6" : "Charles",
@@ -8,4 +8,4 @@
  "skill 8" : "Dev Tools",
  "skill 9" : "Terminal (Gitbash)",
  "skill 10" : "Basic SQL (Create, Delete, Drop, Insert Into, Select, From, Where, Join)",
- "skill 11" : "Postgres"}
+ "skill 11" : "PostgreSQL"}
