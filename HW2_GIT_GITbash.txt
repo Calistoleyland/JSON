@@ -1,0 +1,230 @@
+Для выполнения задания у вас должен быть установлен для Windows - GitBash.
+Создан аккаунт в GitHub
+
+Все шаги сценария выполняйте в терминале GitBush, Terminal, в папке под гитом.
+
+Как отправить ДЗ на проверку.
+ 1. Создайте текстоовый файл как в первом ДЗ по Terminal.
+ 2. Сценарий перенесите в этот файл.
+ 3. На против каждого действия - напишите команду в GitBash
+
+Файл со сценарием и ссылку на свой гит хаб отправляйте менторам на проверку.
+
+Сгенерировать ssh ключ ----- ssh-keygen -t rsa -C "Calistoleyland"
+Указать имя и адрес электронной почты, которые будут указываться в каждом коммите в Git.
+----- git config --global user.name "Calistoleyland"
+----- git config --global user.email "dianamasliy36@gmail.com" 
+Склонировать репозиторий с внешнего облака на локальный репозиторий ----- git clone git@github.com:Calistoleyland/Vadim_Ksendzov_QAcourse_Group_31.git (ssh ссылка репозитория)
+Проверка статуса репозитория. Вывести информацию обо всех изменениях в директории проекта ----- git status 
+
+
+ЗАЛИВАТЬ ИЗМЕНЕНИЯ НА ВНЕШНИЙ РЕПОЗИТОРИЙ
+При создании файла на локальном диске он не отслеживается. при git status файл горит красным
+---- git add filename добавляет файл в область подготовленных файлов и начинает его отслеживать. Ее необходимо вызывать каждый раз при каких-то изменениях.
+---- git add . добавляет все файлы и папки в эту область.
+---- git commit -m "Comment" Зафиксировать текущие изменения. фотография\сохранение состояния папки
+---- git push добавляет файл на внешний репозиторий с локального диска
+---- git commit -am "Comment" - Фиксирует изменения файла, в который были внесены какие-то изменения. Modified file.
+
+ЗАБИРАТЬ ИЗМЕНЕНИЯ С ВНЕШНЕГО РЕПОЗИТОРИЯ НА ЛОКАЛЬНЫЙ КОМПЬЮТЕР
+Внести изменения в файле на внешнем репозитории и закоммитить изменения Commit changes в окне редактирования
+---- git fetch показывает есть ли какие-то изменения на внешнем репозитории
+---- git pull скачать изменения с внешнего репозитория на локальный диск 
+
+
+
+JSON
+ 4. Создать внешний репозиторий c названием JSON. 
+ 5. Клонировать репозиторий JSON на локальный компьютер. ---- git clone git@github.com:Calistoleyland/JSON.git
+ 6. Внутри локального JSON создать файл “new.json”. ---- cd JSON ---- touch new.json и добавить информацию {"name":"Alex", "surname":"Petrov", "age": 25, "pets":"2_dogs"}
+ 7. Добавить файл под гит. ---- git add new.json
+ 8. Закоммитить файл. ---- git commit - m "add new.json"
+ 9. Отправить файл на внешний GitHub репозиторий. ---- git push
+ 10. Отредактировать содержание файла “new.json” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате JSON. 
+---- vim new.json, i + write some text ({"name" : "Diana", "middlename" : "Dmitrievna", "surname" : "Masliy", "age" : 25, "pets" : "3 dogs", "salary" : 1000}), esc :wq enter 
+ 11. Отправить изменения на внешний репозиторий. ---- git commit -am "modified new.json" || git push
+ 12. Создать файл preferences.json ---- touch preferences.json
+ 13. В файл preferences.json добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате JSON.
+----- vim preferences.json, i + write some text {"film":"Mulholland Drive", "serial":"The Haunting of Hill House", "food":"meat", "season":"Summer", "country":"Island"}, esc :wq, Enter
+ 14. Создать файл sklls.json добавить информацию о скиллах которые будут изучены на курсе в формате JSON 
+
+{"skill 1" : "Basic theory",
+ "skill 2" : "Client server architecture",
+ "skill 3" : "HTTP/HTTPS method, request, response",
+ "skill 4" : "JSON, XML",
+ "skill 5" : "Postman",
+ "skill 6" : "Charles",
+ "skill 7" : "Fiddler",
+ "skill 8" : "Dev Tools",
+ "skill 9" : "Terminal (Gitbash)",
+ "skill 10" : "Basic SQL (Create, Delete, Drop, Insert Into, Select, From, Where, Join)",
+ "skill 11" : "PostgreSQL"}
+
+ 15. Отправить сразу 2 файла на внешний репозиторий. ---- git add preferences.json sklls.json, git commit -m "add 2 files", git push
+ 16. На веб интерфейсе создать файл bug_report.json. ---- 
+ 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 18. На веб интерфейсе модифицировать файл bug_report.json, добавить баг репорт в формате JSON.
+{
+ "ID" : "BR_1",
+ "Title" : "Просходит фриз экрана при съёмке видео сообщения на фронтальную камеру на экране лс чата, если поступает звонок с телефона.",
+ "Environment" : [ 
+   {"Phone" : "Xiaomi POCO M3"}, 
+   {"OC" : "Android"},
+   {"Version" : 10 }],
+ "Precondition" : "Уведомления включены",
+ "Steps" : [
+   {"1" : "Начать запись виддео сообщения"}, 
+   {"2" : "Начать получать звонок с телефона"}, 
+   {"3" : "Отклонить звонок или не принять звонок"}],
+ "AR" : "Происходит фриз экрана. Запись прекращается",
+ "ER" : "Продолжается запись видео сообщения",
+ "Priority" : "Medium",
+ "Severity" : "Major",
+ "Attachments" : "Video_link",
+ "Status" : "Open",
+ "Author" : "Diana Masliy" 
+}
+ 19. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 20. Синхронизировать внешний и локальный репозиторий JSON ---- git fetch    git pull
+
+
+ XML
+ 21. Создать внешний репозиторий c названием XML. 
+ 22. Клонировать репозиторий XML на локальный компьютер.  ---- git clone git@github.com:Calistoleyland/XML.git
+ 23. Внутри локального XML создать файл “new.xml”. ---- touch new.xml
+ 24. Добавить файл под гит. 
+ 25. Закоммитить файл. -----  git add new.xml && git commit -m "add new.xml"
+ 26. Отправить файл на внешний GitHub репозиторий. ---- git push
+ 27. Отредактировать содержание файла “new.xml” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате XML.
+
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+        <name>Diana</name>
+        <middlename>Dmitrievna</middlename>
+        <surname>Masliy</surname>
+        <age>25</age>
+        <pets>3</pets>
+        <salary>1000</salary>
+</root>
+ 
+ 28. Отправить изменения на внешний репозиторий. ---- git commit -am "modified new.xml"
+ 29. Создать файл preferences.xml
+ 30. В файл preferences.xml добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате XML.
+------- cat >> preferences.xml	
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+        <film>Mulholland drive</film>
+        <serial>The Haunting of Hill House</serial>
+        <food>meat</food>
+        <season>summer</season>
+        <country>Iceland</country>
+</root>
+
+ 31. Создать файл sklls.xml добавить информацию о скиллах которые будут изучены на курсе в формате XML
+ ---- vim skills.xml,  i 
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+        <skill 1>Basic theory</skill 1>
+        <skill 2>Client server architecture</skill 2>
+        <skill 3>HTTP/HTTPS method, request, response</skill 3>
+        <skill 4>JSON, XML</skill 4>
+        <skill 5>Postman</skill 5>
+        <skill 6>Charles</skill 6>
+        <skill 7>Fiddler</skill 7>
+        <skill 8>DevTools</skill 8>
+        <skill 9>Terminal Gitbash</skill 9>
+        <skill 10>Basic SQL (Create, Delete, Drop, Insert Into, Select, From, Where, Join)</skill 10>
+        <skill 11>PostgreSQL</skill 11>
+</root>
+
+
+32. Сделать коммит в одну строку. 
+ 33. Отправить сразу 2 файла на внешний репозиторий.
+---- git add -A && git commit -m "add 2 files" && git push
+
+ 34. На веб интерфейсе создать файл bug_report.xml.
+ 35. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 36. На веб интерфейсе модифицировать файл bug_report.xml, добавить баг репорт в формате XML.
+
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+ <ID>BR_1</ID>
+ <Title>Просходит фриз экрана при съёмке видео сообщения на фронтальную камеру на экране лс чата, если поступает звонок с телефона</Title>
+ <Environment>Xiaomi POCO M3, Android 10</Environment>
+ <Precondition>Уведомления включены</Precondition>
+ <Steps>1. Начать запись виддео сообщение. 2. Начать получать звонок с телефона. 3. Отклонить звонок или не принять звонок</Steps>
+ <AR>Происходит фриз экрана. Запись прекращается</AR>
+ <ER>Продолжается запись видео сообщения</ER>
+ <Priority>Medium</Priority>
+ <Severity>Major</Severity>
+ <Attachments>Video_link</Attachments>
+ <Status>Open</Status>
+ <Author>Diana Masliy</Author>
+</root>
+
+
+ 37. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 38. Синхронизировать внешний и локальный репозиторий XML  git fetch git pull
+
+ 
+
+TXT
+ 1. Создать внешний репозиторий c названием TXT.
+ 2. Клонировать репозиторий TXT на локальный компьютер. ---- git clone git@github.com:Calistoleyland/TXT.git
+ 3. Внутри локального TXT создать файл “new.txt”. ---- cat > new.txt
+ 4. Добавить файл под гит. ---- git add new.txt
+ 5. Закоммитить файл. ---- git commit -m "add new.txt"
+ 6. Отправить файл на внешний GitHub репозиторий. --- git push 
+ 7. Отредактировать содержание файла “new.txt” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате TXT.
+----- vim new.json, i 
+----- ФИО - Маслий Диана Дмитриевна
+      возраст - 25 лет
+      количество домашних животных - 3 собаки
+      будущая желаемая зарплата - 600$   
+----- esc :wq enter
+ 8. Отправить изменения на внешний репозиторий. ---- git commit -am "modified new.txt"  git push
+ 9. Создать файл preferences.txt
+ 10. В файл preferences.txt” добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате TXT.
+------  cat >> preferences.txt
+	favourite film - Mulholland drive
+	favourite serial - The Haunting of Hill House
+	favourite food - meat
+	favourite season - summer
+	country - Iceland   Ctrl + c 
+11. Создать файл sklls.txt добавить информацию о скиллах которые будут изучены на курсе в формате TXT
+ ------  cat >> skills.txt
+1. Базовая теория (Что такое тестирование, багрепорты, документация, виды, методы, направления тестирования и т.п.) SDLC, STLC.
+2. Что такое клиент-серверная архитектура.
+3. HTTP Методы запросов на сервер.
+4. Коды ответов HTTP сервера.
+5. Структуры HTTP запросов и ответов.
+6. Что такое JSON, XML. Их структура.
+7. Тестирование API через Postman (JS, автотесты API).
+8. Снятие и чтение логов c внешнего сервера.
+9. Снифинг http web трафика через Charles и Fiddler.
+10. Dev Tools веб браузеров (Google Chrome, FireFox).
+11. VPN. (Как работает, зачем нужен, как использовать, варианты инструментов)
+12. Мобильное тестирование.
+13. Особенность iOS, Android, гайдлайны.
+14. Сборка iOS приложений на XCode. (У кого нет Mac компьютера, просто посмотрят)
+15. Сборка Android приложений на Android Studio.
+16. ADB (управление андройд девайсами).
+17. Настройка прокси и vpn на iOS и Android.
+18. Перехват (сниффинг) мобильного трафика через Charles и Fiddler на iOS и Android.
+19. Командная строка (terminal) Linux (копирование, создание, просмотр, перемещение файлов на серверах без графического интерфейса)
+20. Основы bash скриптинг, автоматизация рутинных задач на сервере.
+21. Доступ к удалённым серверам.
+22. Основы SQL (Create, Delete, Drop, Insert Into, Select, From, Where, Join).
+23. База данных Postgres (установка, настройка и использование).
+24. Нереляционная база данных Redis (установка, настройка и использование).
+25. Нагрузочное тестирование в Jmeter.
+26. Методология разработки Scrum.
+27. Python. (Изучение основ. Создание клиент серверного приложения)
+
+ 12. Сделать коммит в одну строку. ---- git add -A && git commit -m "Коммит в одну строку"
+ 13. Отправить сразу 2 файла на внешний репозиторий. ---- git push
+ 14. На веб интерфейсе создать файл bug_report.txt. 
+ 15. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 16. На веб интерфейсе модифицировать файл bug_report.txt, добавить баг репорт в формате TXT.
+ 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 18. Синхронизировать внешний и локальный репозиторий TXT  ---- git fetch git pull
